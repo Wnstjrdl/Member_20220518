@@ -13,20 +13,7 @@ public class MemberRepository {
     private SqlSessionTemplate sql;
 
 
-    public void save(String memberId, String memberPassword, String memberName, int memberAge, String memberPhone) {
-        MemberDTO memberDTO=new MemberDTO();
-        memberDTO.setMemberId(memberId);
-        memberDTO.setMemberPassword(memberPassword);
-        memberDTO.setMemberName(memberName);
-        memberDTO.setMemberAge(memberAge);
-        memberDTO.setMemberPhone(memberPhone);
-        sql.insert("member.save",memberDTO);
-    }
-
-    public void save1(String memberId, String memberPassword) {
-        MemberDTO memberDTO=new MemberDTO();
-        memberDTO.setMemberId(memberId);
-        memberDTO.setMemberPassword(memberPassword);
-        sql.insert("member.save1",memberDTO);
+    public int save(MemberDTO memberDTO) {
+        return sql.insert("Member.save",memberDTO);
     }
 }

@@ -11,11 +11,10 @@
     <title>Title</title>
 </head>
 <body>
+<h2>index.jsp</h2>
 <a href="/save-form">회원가입 페이지 출력</a>
-<a href="/save">회원가입 처리</a>
 <a href="/login-form">로그인 페이지 출력</a>
-<a href="/login-from">로그인 처리</a>
-<a href="/findAll">목록출력</a>
+<a href="/findAll">회원목록출력</a>
 
 </body>
 </html>
