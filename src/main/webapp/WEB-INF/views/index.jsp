@@ -16,5 +16,8 @@
 <a href="/login-form">로그인 페이지 출력</a>
 <a href="/findAll">회원목록출력</a>
 
+로그인 회원 정보:${loginMember}
+세션에 담은 memberId:${sessionScope.loginMemberId}
+세션에 담은 id:${sessionScope.loginId}
 </body>
 </html>
