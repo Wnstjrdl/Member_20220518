@@ -9,6 +9,7 @@ import java.util.List;
 
 @Repository
 public class MemberRepository {
+
     @Autowired
     private SqlSessionTemplate sql;
     public int save(MemberDTO memberDTO) {
@@ -33,5 +34,10 @@ public class MemberRepository {
 
     public int update(MemberDTO memberDTO) {
         return  sql.update("Member.update",memberDTO);
+    }
+
+
+    public String duplicateCheck(String memberId) {
+        return sql.selectOne("Member.duplicate",memberId);
     }
 }
