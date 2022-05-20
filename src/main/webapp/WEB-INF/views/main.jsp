@@ -10,28 +10,22 @@
 <head>
     <title>Title</title>
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
-    <style>
-        .container {
-            max-width: 500px;
-        }
-    </style>
 </head>
 <body>
-<div class="container">
-    <h2 class="display-4 fw-normal">save.jsp</h2>
-    <div class="py-5 text-center">
-
-        <form action="/save" method="post">
-            <input class="form-control mb-2" type="text" name="memberId" placeholder="아이디">
-            <input class="form-control mb-2" type="text" name="memberPassword" placeholder="비밀번호">
-            <input class="form-control mb-2" type="text" name="memberName" placeholder="이름">
-            <input class="form-control mb-2" type="text" name="memberAge" placeholder="나이">
-            <input class="form-control mb-2" type="text" name="memberPhone" placeholder="전화번호">
-            <input class="btn btn-primary" type="submit" value="회원가입">
-            <button>버튼tag가입</button>
-            <input type="button" value="button타입">
-        </form>
-    </div>
-</div>
+<h2>main.jsp</h2>
+로그인 회원 정보: ${loginMember} <br>
+세션에 담은 memberId: ${sessionScope.loginMemberId} <br>
+세션에 담은 id: ${sessionScope.loginId} <br>
+<a href="/">index로 이동</a> <br>
+<button class="btn btn-primary" onclick="location.href='/update-form'">수정</button> <br>
+<button class="btn btn-danger" onclick="updateForm()">수정(함수호출)</button> <br>
 </body>
+<script>
+    // function updateForm() {
+    //
+    // }
+    const updateForm = () => {
+        location.href = "/update-form";
+    }
+</script>
 </html>

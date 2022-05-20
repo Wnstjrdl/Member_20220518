@@ -9,15 +9,16 @@
 <html>
 <head>
     <title>Title</title>
+
 </head>
 <body>
 <h2>index.jsp</h2>
-<a href="/save-form">회원가입 페이지 출력</a>
-<a href="/login-form">로그인 페이지 출력</a>
-<a href="/findAll">회원목록출력</a>
+<a href="/save-form">회원가입</a> <br>
+<a href="/login-form">로그인</a> <br>
+<a href="/findAll">회원목록</a> <br>
 
-로그인 회원 정보:${loginMember}
-세션에 담은 memberId:${sessionScope.loginMemberId}
-세션에 담은 id:${sessionScope.loginId}
+로그인 회원 정보:${loginMember}<br />
+세션에 담은 memberId:${sessionScope.loginMemberId}<br />
+세션에 담은 id:${sessionScope.loginId}<br />
 </body>
 </html>

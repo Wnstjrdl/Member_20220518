@@ -41,6 +41,7 @@
                 <td>${member.memberAge}</td>
                 <td>${member.memberPhone}</td>
                 <td><a href="/detail?id=${member.id}">조회</a></td>
+                <td><a href="/delete?id=${member.id}">삭제</a></td>
                     <%-- 클릭한 회원의 정보를 DB에서 가져와서 detail.jsp에 출력 --%>
             </tr>
         </c:forEach>
