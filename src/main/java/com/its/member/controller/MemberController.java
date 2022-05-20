@@ -115,5 +115,15 @@ public class MemberController {
     public @ResponseBody List<MemberDTO> responseTest2(){
         return memberService.findAll();
     }
-
+    @GetMapping("/detail-ajax")
+    public @ResponseBody MemberDTO findByIdAjax(@RequestParam("id") Long id) {
+        System.out.println("id = " + id);
+        MemberDTO memberDTO = memberService.findById(id);
+        return memberDTO;
+    }
+    @GetMapping("/logout")
+    public  String logout(HttpSession session){
+        session.invalidate();
+        return "index";
+    }
 }
