@@ -42,7 +42,7 @@ public class MemberController {
             model.addAttribute("loginMember", loginMember);
             session.setAttribute("loginMemberId", loginMember.getMemberId());
             session.setAttribute("loginId", loginMember.getId());
-            return "main";
+            return "findAll";
         } else {
             return "login";
         }
